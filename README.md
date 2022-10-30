@@ -9,7 +9,7 @@
   - [Github](https://github.com/spring-projects)
 ## Spring Guru
   - [springframework.guru/](https://springframework.guru/)
-  - [Blog}(https://springframework.guru/blog/)
+  - [Blog](https://springframework.guru/blog/)
 
 
 
