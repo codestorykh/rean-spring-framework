@@ -8,7 +8,7 @@
   - [Community](https://spring.io/community)
   - [Github](https://github.com/spring-projects)
 ## Spring Guru
-  - [springframework.guru/](https://springframework.guru/)
+  - [springframework.guru/](https://springframework.guru)
   - [Blog](https://springframework.guru/blog/)
 
 
