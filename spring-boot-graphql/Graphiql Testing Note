@@ -1,0 +1,44 @@
+Read:
+{
+  authors {
+    id
+    name
+    books {
+      id
+      title
+      publisher
+    }
+  }
+}
+
+
+Add:
+mutation {
+  addBook(bookInput: {
+    id: 5,
+    title: "Golang",
+    publisher: "GO",
+    authorId: 2
+  })
+  {
+    id
+  }
+}
+
+Update:
+mutation {
+  updateBook(bookInput: {
+    id: 3,
+    title: "Free Course Online",
+    publisher: "Free",
+    authorId: 1
+  })
+  {
+    id
+  }
+}
+
+Delete:
+mutation {
+  deleteBook(id: 3)
+}
