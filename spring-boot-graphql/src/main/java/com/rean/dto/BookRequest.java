@@ -1,4 +1,12 @@
 package com.rean.dto;
 
-public record BookRequest(Long id, String title, String publisher, Long authorId) {
+import lombok.Data;
+
+@Data
+public class BookRequest {
+
+    private Long id;
+    private String title;
+    private String publisher;
+    private Long authorId;
 }

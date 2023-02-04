@@ -1,0 +1,20 @@
+
+
+upload:
+  files:
+    #path: D:\\tmp\\uploads\\files
+    path: /Users/theara/project/dev.io/rean-spring-framework/multiple-file-upload/src/main/resources/
+    extensions: jpg, jpeg, png, gif
+
+spring:
+  application:
+    name: file-upload-services
+  h2:
+    console.enabled: true
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect

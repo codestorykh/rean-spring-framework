@@ -23,11 +23,11 @@ public class BookAuthorController {
     @MutationMapping
     public Book addBook(@Argument BookRequest bookInput) {
         log.info("Intercept create new book {}", bookInput);
-        Author author = authorRepository.findById(bookInput.authorId())
+        Author author = authorRepository.findById(bookInput.getAuthorId())
                 .orElseThrow(() -> new IllegalArgumentException("Author ID not found"));
         Book book = Book.builder()
-                .title(bookInput.title())
-                .publisher(bookInput.publisher())
+                .title(bookInput.getTitle())
+                .publisher(bookInput.getPublisher())
                 .author(author)
                 .build();
         bookRepository.save(book);
@@ -36,15 +36,15 @@ public class BookAuthorController {
 
     @MutationMapping
     public Book updateBook(@Argument BookRequest bookInput) {
-        Author author = authorRepository.findById(bookInput.authorId())
+        Author author = authorRepository.findById(bookInput.getAuthorId())
                 .orElseThrow(() -> new IllegalArgumentException("Author ID not found"));
 
-        Book book = bookRepository.findById(bookInput.id())
+        Book book = bookRepository.findById(bookInput.getId())
                 .orElseThrow(() -> new IllegalArgumentException("Book ID not found"));
 
         book.setAuthor(author);
-        book.setPublisher(bookInput.publisher());
-        book.setTitle(bookInput.title());
+        book.setPublisher(bookInput.getPublisher());
+        book.setTitle(bookInput.getTitle());
         return bookRepository.save(book);
     }
 
