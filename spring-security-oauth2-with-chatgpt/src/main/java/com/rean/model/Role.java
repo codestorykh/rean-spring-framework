@@ -1,10 +1,9 @@
 package com.rean.model;
 
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import javax.persistence.*;
 
 @Data
 @NoArgsConstructor
@@ -17,7 +16,6 @@ public class Role {
     private Long id;
 
     @Column(nullable = false, unique = true)
-    private String roleName;
+    private String name;
 
-    // Getters and setters
 }
