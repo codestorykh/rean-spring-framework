@@ -1,0 +1,13 @@
+server:
+  # port: 8081 # we already custom with Java Config [CustomerApplicationServerPort]
+  servlet:
+    context-path: /basic-config
+
+spring:
+  main:
+    banner-mode: off
+
+
+my:
+  app: app-code
+  list: act,del,sup
