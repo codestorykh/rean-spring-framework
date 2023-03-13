@@ -1,8 +1,10 @@
 package com.rean.controller;
 
+import com.rean.execption.TodoErrorException;
 import com.rean.model.Todo;
 import com.rean.model.TodoBuilder;
 import com.rean.repository.CommonRepository;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -25,7 +27,7 @@ public class TodoController {
 
         Todo todoInstance = commonRepository.save(todo);
         URI location = ServletUriComponentsBuilder.fromCurrentRequest()
-                .path("{/id").buildAndExpand(todoInstance.getId()).toUri();
+                .path("/{id}").buildAndExpand(todoInstance.getId()).toUri();
         return ResponseEntity.created(location).build();
     }
 
@@ -36,7 +38,7 @@ public class TodoController {
         commonRepository.save(todoData);
 
         URI location = ServletUriComponentsBuilder.fromCurrentRequest()
-                .path("{/id").buildAndExpand(todoData.getId()).toUri();
+                .path("/{id}").buildAndExpand(todoData.getId()).toUri();
         return ResponseEntity.ok().header("Location", location.toString()).build();
     }
 
@@ -62,4 +64,10 @@ public class TodoController {
         return ResponseEntity.ok(commonRepository.findAll());
     }
 
+
+    @ExceptionHandler
+    @ResponseStatus(value = HttpStatus.BAD_REQUEST)
+    public TodoErrorException handleExceptionError(Exception exception) {
+        return new TodoErrorException(exception.getLocalizedMessage());
+    }
 }
