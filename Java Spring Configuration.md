@@ -36,6 +36,22 @@
   private static final String SQL_DELETE = "delete from tbl_todo where id = :id ";
 ```
 
+## Spring Data JPA Datasource PostgresSQL Config:
+```
+spring.profiles.active=${SPRING_PROFILES_ACTIVE:main}
+spring.banner.location=${spring.profiles.active}.banner.txt
 
-  
+# PostgreSQL
+spring.datasource.url=jdbc:postgresql://server_name:portst/database_name
+spring.datasource.username=username
+spring.datasource.password=password
+
+# JPA (JpaBaseConfiguration, HibernateJpaAutoConfiguration)
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=false
+spring.jpa.properties.hibernate.format_sql=false
+spring.jpa.properties.hibernate.enable_lazy_load_no_trans=true
+```
+
   
