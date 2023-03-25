@@ -38,20 +38,21 @@
 
 ## Spring Data JPA Datasource PostgresSQL Config:
 ```
-spring.profiles.active=${SPRING_PROFILES_ACTIVE:main}
-spring.banner.location=${spring.profiles.active}.banner.txt
+server.port=9191
 
-# PostgreSQL
-spring.datasource.url=jdbc:postgresql://server_name:portst/database_name
-spring.datasource.username=username
-spring.datasource.password=password
+spring.application.name=SPRING-DATA-JPA-RELATIONSHIP
+spring.datasource.url=jdbc:postgresql://127.0.0.1:5432/deno
+spring.datasource.username=postgres
+spring.datasource.password=123456
+spring.datasource.driver-class-name=org.postgresql.Driver
 
-# JPA (JpaBaseConfiguration, HibernateJpaAutoConfiguration)
-spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
 spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=false
-spring.jpa.properties.hibernate.format_sql=false
-spring.jpa.properties.hibernate.enable_lazy_load_no_trans=true
+
+#spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+logging.level.org.hibernate.SQL=debug
+logging.level.org.hibernate.type.descriptor.sql=trace
+logging.level.org.springframework.web=DEBUG
 ```
 
   
