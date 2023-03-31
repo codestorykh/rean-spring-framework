@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/1. Introduction To Spring Boot.iml" filepath="$PROJECT_DIR$/.idea/1. Introduction To Spring Boot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/#2 spring-boot-3-first-view/spring-boot-3-first-view.iml" filepath="$PROJECT_DIR$/#2 spring-boot-3-first-view/spring-boot-3-first-view.iml" />
+      <module fileurl="file://$PROJECT_DIR$/#1 spring-boot-3-getting-started/spring-boot-3-getting-started.iml" filepath="$PROJECT_DIR$/#1 spring-boot-3-getting-started/spring-boot-3-getting-started.iml" />
+    </modules>
+  </component>
+</project>
