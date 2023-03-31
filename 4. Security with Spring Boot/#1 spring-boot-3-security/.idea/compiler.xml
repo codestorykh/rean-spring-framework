@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="rest-api" />
+        <module name="security-database-config" />
+        <module name="security-default-config" />
+        <module name="security-inmemory-config" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="basic-config" target="19" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="basic-config" options="-parameters" />
+      <module name="rest-api" options="-parameters" />
+      <module name="security-database-config" options="-parameters" />
+      <module name="security-default-config" options="-parameters" />
+      <module name="security-inmemory-config" options="-parameters" />
+      <module name="spring-boot-3-security" options="" />
+    </option>
+  </component>
+</project>

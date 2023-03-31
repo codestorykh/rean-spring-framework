@@ -1,0 +1,19 @@
+server:
+  port: 8083
+
+
+spring:
+  application:
+    name: customer-services
+  datasource:
+    url: jdbc:postgresql://localhost:5432/user_io
+    password: password
+    username: reancode
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true

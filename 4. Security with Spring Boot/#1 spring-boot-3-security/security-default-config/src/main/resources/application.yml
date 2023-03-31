@@ -1,0 +1,11 @@
+server:
+  port: 8081
+
+# logout => localhost:8081/logout
+# default user => user
+spring:
+  security:
+    user:
+      name: admin
+      password: admin
+      roles: ADMIN,USER
