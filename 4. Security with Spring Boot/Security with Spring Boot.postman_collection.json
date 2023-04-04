@@ -1,0 +1,267 @@
+{
+	"info": {
+		"_postman_id": "f65b28ce-8208-4583-a284-824aeb023b28",
+		"name": "Security with Spring Boot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24022677"
+	},
+	"item": [
+		{
+			"name": "Init User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "username",
+						"value": "reancode",
+						"type": "text"
+					},
+					{
+						"key": "password",
+						"value": "123456",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"reancode\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/v1/public/user/init",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"user",
+						"init"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "username",
+						"value": "reancode",
+						"type": "text"
+					},
+					{
+						"key": "password",
+						"value": "123456",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"reancode\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8083/api/v1/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Todos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "reancode",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"reancode\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8083/api/v1/todos",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"v1",
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Security with Jwt",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"reancode\",\n    \"password\": \"123456\",\n    \"email\": \"reancode@gmail.com\",\n    \"full_name\": \"Rean Code\",\n    \"roles\":[\n        \"ADMIN\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/public/accounts/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"accounts",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authorization with Jwt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"reancode\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/authorization",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authorization"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Jwt",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyZWFuY29kZSIsImF1dGhvcml0aWVzIjpbIkFETUlOIl0sInJvbGVzIjpbIkFETUlOIl0sImlzRW5hYmxlIjp0cnVlLCJpYXQiOjE2ODA1OTI5NTYsImV4cCI6MTY4MDU5MzA3Nn0.G9pR_74Hw-Oa0Zlpj06T0_s2rJEss_tHbm5VEERs5zs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/admin/accounts",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"admin",
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Jwt",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyZWFuY29kZSIsImF1dGhvcml0aWVzIjpbIkFETUlOIl0sInJvbGVzIjpbIkFETUlOIl0sImlhdCI6MTY4MDU3NjgyMCwiZXhwIjoxNjgwNTgwNDIwfQ.PvBerMLIr2VG1Y8DsyU4ZQjMA7sURtJeC6GQfWqb5Ww",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/user/accounts",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
