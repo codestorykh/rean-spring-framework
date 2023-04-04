@@ -54,5 +54,25 @@ logging.level.org.hibernate.SQL=debug
 logging.level.org.hibernate.type.descriptor.sql=trace
 logging.level.org.springframework.web=DEBUG
 ```
+## Spring Data JPA Datasource PostgresSQL Config:
+```
+spring:
+  application:
+    name: customer-services
+  datasource:
+    url: jdbc:postgresql://localhost:5432/user_io
+    password: password
+    username: reancode
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+```    
+    
+    
 
   
