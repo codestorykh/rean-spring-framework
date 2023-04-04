@@ -1,0 +1,29 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: customer-services
+  datasource:
+    url: jdbc:postgresql://localhost:5432/user_io
+    password: password
+    username: reancode
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+
+# JWT CONFIG
+# Key secret generate https://www.allkeysgenerator.com/Random/Security-Encryption-Key-Generator.aspx
+# expiration 3600 seconds equal 1 hour
+jwt:
+  url: '/authorization'
+  header: 'Authorization'
+  prefix: 'Bearer '
+  expiration: 120
+  secret: '66546A576E5A7234743777217A25432A462D4A614E645267556B587032733576'
+
