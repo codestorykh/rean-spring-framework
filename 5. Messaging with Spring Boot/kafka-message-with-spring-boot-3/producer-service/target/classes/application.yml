@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: producer-services
+  kafka:
+    bootstrap-servers: http://localhost:9092
+    consumer:
+      group-id: notification-id
+    topic:
+      notification: notification
