@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: notification-services
+  datasource:
+    password: password
+    url: jdbc:postgresql://localhost:5432/notification
+    username: reancode
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+  rabbitmq:
+    addresses: localhost:5672
+# rabbitmq
+rabbitmq:
+  exchanges:
+    internal: internal.exchange # create a new topic exchange name
+  queues:
+    notification: notification.queue # create a new queue name
+  routing-keys:
+    internal-notification: internal.notification.routing-key # create a new name of exchange and queue (binding)
+
+
