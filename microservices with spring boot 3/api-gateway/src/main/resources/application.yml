@@ -1,0 +1,51 @@
+server:
+  port: 8083
+
+# Take the span id and trace id from the Mapped Diagnostic Context (MDC) and
+# put them into the log message.
+logging:
+  pattern:
+    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: customer-services
+          uri: lb://CUSTOMER-SERVICES
+          predicates:
+            - Path=/api/v1/customers/**
+        - id: fraud-services
+          uri: lb://FRAUD-SERVICES
+          predicates:
+            - Path=/api/v1/fraud-checks/**
+  profiles:
+    active: default
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
+    enabled: true
+
+# sampling all in dev, reduce it in prod to save loading
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
+  endpoints:
+    web:
+      exposure:
+        include: prometheus
+  metrics:
+    distribution:
+      percentiles-histogram:
+        http:
+          server:
+            requests: true

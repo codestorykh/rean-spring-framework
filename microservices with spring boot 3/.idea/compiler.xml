@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="config-server" />
+        <module name="clients" />
+        <module name="notification-services" />
+        <module name="customer-services" />
+        <module name="api-gateway" />
+        <module name="eureka-server" />
+        <module name="rabbitmq" />
+        <module name="fraud-services" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="kafka-services" target="19" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api-gateway" options="-parameters" />
+      <module name="clients" options="-parameters" />
+      <module name="config-server" options="-parameters" />
+      <module name="customer-services" options="-parameters" />
+      <module name="eureka-server" options="-parameters" />
+      <module name="fraud-services" options="-parameters" />
+      <module name="kafka-services" options="-parameters" />
+      <module name="notification-services" options="-parameters" />
+      <module name="rabbitmq" options="-parameters" />
+      <module name="rean-microservices" options="-parameters" />
+    </option>
+  </component>
+</project>

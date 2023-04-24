@@ -1,0 +1,58 @@
+server:
+  port: 8081
+
+logging:
+  file:
+    path: './logs/${spring.application.name}'
+    name: ${logging.file.path}.log
+  pattern:
+    # level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
+    console: "[%d] [%t] %-5level [${spring.application.name:},%X{traceId:-},%X{spanId:-}] %-32.32logger{36} - %msg%n"
+    file: "[%d] [%t] %-5level [${spring.application.name:},%X{traceId:-},%X{spanId:-}] %-32.32logger{36} - %msg%n"
+  logback:
+    rolling policy:
+      max-file-size: 20MB
+
+spring:
+  application:
+    name: fraud-services
+  datasource:
+    url: jdbc:postgresql://localhost:5432/fraud
+    password: password
+    username: reancode
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
+    enabled: true
+
+# sampling all in dev, reduce it in prod to save loading
+# sampling all in dev, reduce it in prod to save loading
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
+  endpoints:
+    web:
+      exposure:
+        include: prometheus
+  metrics:
+    distribution:
+      percentiles-histogram:
+        http:
+          server:
+            requests: true

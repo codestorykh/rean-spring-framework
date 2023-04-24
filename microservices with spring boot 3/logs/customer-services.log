@@ -1,0 +1,533 @@
+[2023-04-15 13:25:06,177] [main] INFO  [customer-services,,] ean.customer.CustomerApplication - No active profile set, falling back to 1 default profile: "default"
+[2023-04-15 13:25:06,558] [main] INFO  [customer-services,,] .RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-04-15 13:25:06,625] [main] INFO  [customer-services,,] .RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 63 ms. Found 1 JPA repository interfaces.
+[2023-04-15 13:25:06,753] [main] INFO  [customer-services,,] cloud.context.scope.GenericScope - BeanFactory id=d745ce40-1b6b-3a77-8115-2b63ed532a9f
+[2023-04-15 13:25:06,785] [main] INFO  [customer-services,,] elegate$BeanPostProcessorChecker - Bean 'com.rean.clients.fraud.FraudClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2023-04-15 13:25:06,786] [main] INFO  [customer-services,,] elegate$BeanPostProcessorChecker - Bean 'com.rean.clients.notification.NotificationClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2023-04-15 13:25:06,926] [main] INFO  [customer-services,,] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[2023-04-15 13:25:06,930] [main] INFO  [customer-services,,] .a.catalina.core.StandardService - Starting service [Tomcat]
+[2023-04-15 13:25:06,930] [main] INFO  [customer-services,,] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+[2023-04-15 13:25:06,964] [main] INFO  [customer-services,,] a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2023-04-15 13:25:06,964] [main] INFO  [customer-services,,] rvletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 781 ms
+[2023-04-15 13:25:07,207] [main] INFO  [customer-services,,] o.h.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-04-15 13:25:07,230] [main] INFO  [customer-services,,] org.hibernate.Version            - HHH000412: Hibernate ORM core version 6.1.7.Final
+[2023-04-15 13:25:07,374] [main] INFO  [customer-services,,] m.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2023-04-15 13:25:07,464] [main] INFO  [customer-services,,] om.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@677c2820
+[2023-04-15 13:25:07,466] [main] INFO  [customer-services,,] m.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2023-04-15 13:25:07,483] [main] INFO  [customer-services,,] SQL dialect                      - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[2023-04-15 13:25:07,846] [main] WARN  [customer-services,,] .h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+[2023-04-15 13:25:07,846] [main] WARN  [customer-services,,] .h.e.jdbc.spi.SqlExceptionHelper - table "tbl_customer" does not exist, skipping
+[2023-04-15 13:25:07,865] [main] INFO  [customer-services,,] h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-04-15 13:25:07,878] [main] INFO  [customer-services,,] ontainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-04-15 13:25:08,072] [main] WARN  [customer-services,,] onfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-04-15 13:25:08,103] [main] INFO  [customer-services,,] o.s.c.o.FeignClientFactoryBean   - For 'fraud-services' URL not provided. Will try picking an instance via load-balancing.
+[2023-04-15 13:25:08,130] [main] INFO  [customer-services,,] o.s.c.o.FeignClientFactoryBean   - For 'notification-services' URL not provided. Will try picking an instance via load-balancing.
+[2023-04-15 13:25:08,557] [main] INFO  [customer-services,,] yClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+[2023-04-15 13:25:08,570] [main] WARN  [customer-services,,] n$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+[2023-04-15 13:25:08,577] [main] INFO  [customer-services,,] .b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+[2023-04-15 13:25:08,605] [main] WARN  [customer-services,,] ableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.springframework.amqp.rabbit.core.RabbitAdmin
+[2023-04-15 13:25:08,636] [main] INFO  [customer-services,,] o.a.k.c.admin.AdminClientConfig  - AdminClientConfig values: 
+	bootstrap.servers = [http://localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+[2023-04-15 13:25:08,666] [main] INFO  [customer-services,,] kafka.common.utils.AppInfoParser - Kafka version: 3.3.2
+[2023-04-15 13:25:08,666] [main] INFO  [customer-services,,] kafka.common.utils.AppInfoParser - Kafka commitId: b66af662e61082cb
+[2023-04-15 13:25:08,666] [main] INFO  [customer-services,,] kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1681539908666
+[2023-04-15 13:25:08,850] [kafka-admin-client-thread | adminclient-1] INFO  [customer-services,,] kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+[2023-04-15 13:25:08,852] [kafka-admin-client-thread | adminclient-1] INFO  [customer-services,,] o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+[2023-04-15 13:25:08,852] [kafka-admin-client-thread | adminclient-1] INFO  [customer-services,,] o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+[2023-04-15 13:25:08,852] [kafka-admin-client-thread | adminclient-1] INFO  [customer-services,,] o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+[2023-04-15 13:25:08,859] [main] INFO  [customer-services,,] s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+[2023-04-15 13:25:08,873] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+[2023-04-15 13:25:08,875] [main] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 13:25:08,883] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Disable delta property : false
+[2023-04-15 13:25:08,883] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+[2023-04-15 13:25:08,883] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Force full registry fetch : false
+[2023-04-15 13:25:08,883] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Application is null : false
+[2023-04-15 13:25:08,883] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+[2023-04-15 13:25:08,884] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Application version is -1: true
+[2023-04-15 13:25:08,884] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+[2023-04-15 13:25:08,960] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - The response status is 200
+[2023-04-15 13:25:08,961] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+[2023-04-15 13:25:08,962] [main] INFO  [customer-services,,] discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+[2023-04-15 13:25:08,964] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1681539908964 with initial instances count: 1
+[2023-04-15 13:25:08,966] [main] INFO  [customer-services,,] .s.c.n.e.s.EurekaServiceRegistry - Registering application CUSTOMER-SERVICES with eureka with status UP
+[2023-04-15 13:25:08,966] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1681539908966, current=UP, previous=STARTING]
+[2023-04-15 13:25:08,966] [DiscoveryClient-InstanceInfoReplicator-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICES/192.168.1.108:customer-services:8080: registering service...
+[2023-04-15 13:25:08,977] [main] INFO  [customer-services,,] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[2023-04-15 13:25:08,977] [main] INFO  [customer-services,,] .s.EurekaAutoServiceRegistration - Updating port to 8080
+[2023-04-15 13:25:08,986] [DiscoveryClient-InstanceInfoReplicator-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICES/192.168.1.108:customer-services:8080 - registration status: 204
+[2023-04-15 13:25:08,990] [main] INFO  [customer-services,,] ean.customer.CustomerApplication - Started CustomerApplication in 3.148 seconds (process running for 8.504)
+[2023-04-15 13:30:08,909] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 13:30:30,645] [http-nio-8080-exec-2] INFO  [customer-services,,] a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2023-04-15 13:30:30,645] [http-nio-8080-exec-2] INFO  [customer-services,,] .s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[2023-04-15 13:30:30,649] [http-nio-8080-exec-2] INFO  [customer-services,,] .s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+[2023-04-15 13:30:30,683] [http-nio-8080-exec-2] INFO  [customer-services,643a44861db08899af626651a5ff654a,9b6bcda1d7e767a2] .c.controller.CustomerController - Intercept request register customer CustomerRegistrationRequest[firstName=Java Programming, lastName=Hello, email=theara@gmail.com, idType=ID_NUMBER, idValue=123456, phoneNumber=089252525, gender=M]
+[2023-04-15 13:30:30,927] [http-nio-8080-exec-2] INFO  [customer-services,643a44861db08899af626651a5ff654a,9b6bcda1d7e767a2] o.a.k.c.producer.ProducerConfig  - ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [http://localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+[2023-04-15 13:30:30,932] [http-nio-8080-exec-2] INFO  [customer-services,643a44861db08899af626651a5ff654a,9b6bcda1d7e767a2] k.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+[2023-04-15 13:30:30,938] [http-nio-8080-exec-2] INFO  [customer-services,643a44861db08899af626651a5ff654a,9b6bcda1d7e767a2] kafka.common.utils.AppInfoParser - Kafka version: 3.3.2
+[2023-04-15 13:30:30,938] [http-nio-8080-exec-2] INFO  [customer-services,643a44861db08899af626651a5ff654a,9b6bcda1d7e767a2] kafka.common.utils.AppInfoParser - Kafka commitId: b66af662e61082cb
+[2023-04-15 13:30:30,938] [http-nio-8080-exec-2] INFO  [customer-services,643a44861db08899af626651a5ff654a,9b6bcda1d7e767a2] kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1681540230938
+[2023-04-15 13:30:30,951] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-0 to 0 since the associated topicId changed from null to BZoDhJspSHG0ut8y0kQCAQ
+[2023-04-15 13:30:30,951] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-5 to 0 since the associated topicId changed from null to BZoDhJspSHG0ut8y0kQCAQ
+[2023-04-15 13:30:30,951] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-2 to 0 since the associated topicId changed from null to BZoDhJspSHG0ut8y0kQCAQ
+[2023-04-15 13:30:30,951] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-8 to 0 since the associated topicId changed from null to BZoDhJspSHG0ut8y0kQCAQ
+[2023-04-15 13:30:30,951] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-9 to 0 since the associated topicId changed from null to BZoDhJspSHG0ut8y0kQCAQ
+[2023-04-15 13:30:30,951] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-1 to 0 since the associated topicId changed from null to BZoDhJspSHG0ut8y0kQCAQ
+[2023-04-15 13:30:30,951] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-4 to 0 since the associated topicId changed from null to BZoDhJspSHG0ut8y0kQCAQ
+[2023-04-15 13:30:30,951] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-6 to 0 since the associated topicId changed from null to BZoDhJspSHG0ut8y0kQCAQ
+[2023-04-15 13:30:30,951] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-7 to 0 since the associated topicId changed from null to BZoDhJspSHG0ut8y0kQCAQ
+[2023-04-15 13:30:30,951] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-3 to 0 since the associated topicId changed from null to BZoDhJspSHG0ut8y0kQCAQ
+[2023-04-15 13:30:30,951] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: hi-TtWXTT-6SA4gOhWMoKg
+[2023-04-15 13:30:30,952] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] o.a.k.c.p.i.TransactionManager   - [Producer clientId=producer-1] ProducerId set to 5001 with epoch 0
+[2023-04-15 13:35:08,917] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 13:39:30,989] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] ache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
+[2023-04-15 13:40:08,928] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 13:45:08,952] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 13:50:08,966] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 13:55:08,977] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 14:00:08,951] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 14:05:08,961] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 14:10:08,972] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 14:15:08,981] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 14:20:08,992] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 14:25:09,002] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 14:30:09,009] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 14:35:09,011] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 14:40:09,021] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 14:45:09,029] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 14:50:09,036] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 14:55:09,043] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 15:00:09,052] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 15:05:09,062] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 15:10:09,070] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 15:15:09,075] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 15:20:09,116] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 15:25:09,128] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 15:30:09,137] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 15:35:09,146] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 15:40:09,158] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 15:45:09,166] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 15:50:09,172] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 15:55:09,178] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 16:00:09,187] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 16:05:09,196] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 16:10:09,204] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 16:15:09,212] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 16:20:09,231] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 16:25:09,237] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 16:30:09,244] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 16:35:09,250] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 16:40:09,260] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 16:45:09,271] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 16:50:09,279] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 16:55:09,288] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 17:00:09,297] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 17:05:09,305] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 17:10:09,314] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 17:15:09,324] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 17:20:09,339] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 17:25:09,353] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 17:30:09,365] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 17:35:09,346] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 17:40:09,356] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 17:45:09,362] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 18:06:01,806] [HikariPool-1 housekeeper] WARN  [customer-services,,] om.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m52s24ms).
+[2023-04-15 18:30:56,680] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 18:30:57,093] [HikariPool-1 housekeeper] WARN  [customer-services,,] om.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=24m55s289ms).
+[2023-04-15 18:35:56,679] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 18:40:56,676] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 18:45:56,686] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 18:50:56,695] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 18:55:56,703] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 19:00:56,711] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 19:05:56,720] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 19:10:56,750] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 19:15:56,762] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 19:20:56,789] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 19:25:56,763] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 19:30:56,771] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 19:35:56,778] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 19:40:56,825] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 19:45:56,836] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 19:50:56,845] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 19:55:56,844] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 20:00:56,850] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 20:05:56,856] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 20:10:56,884] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 20:15:56,897] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 20:20:56,907] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 20:25:56,913] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 20:30:56,921] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 20:35:56,928] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 20:40:56,830] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 20:45:56,834] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 20:50:56,837] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 20:55:56,834] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 21:00:56,832] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 21:05:56,835] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 21:10:56,925] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 21:15:56,932] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 21:20:56,937] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 21:25:56,956] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 21:30:56,963] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 21:35:56,968] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 21:40:56,985] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 21:45:56,991] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 21:50:56,999] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 21:55:57,011] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 22:00:57,019] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2023-04-15 22:05:26,306] [SpringApplicationShutdownHook] INFO  [customer-services,,] .s.c.n.e.s.EurekaServiceRegistry - Unregistering application CUSTOMER-SERVICES with eureka with status DOWN
+[2023-04-15 22:05:26,306] [SpringApplicationShutdownHook] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1681571126306, current=DOWN, previous=UP]
+[2023-04-15 22:05:26,307] [DiscoveryClient-InstanceInfoReplicator-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICES/192.168.1.108:customer-services:8080: registering service...
+[2023-04-15 22:05:26,325] [DiscoveryClient-InstanceInfoReplicator-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICES/192.168.1.108:customer-services:8080 - registration status: 204
+[2023-04-15 22:05:26,373] [SpringApplicationShutdownHook] INFO  [customer-services,,] ontainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-04-15 22:05:26,381] [SpringApplicationShutdownHook] INFO  [customer-services,,] ropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+[2023-04-15 22:05:26,409] [SpringApplicationShutdownHook] INFO  [customer-services,,] m.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2023-04-15 22:05:26,413] [SpringApplicationShutdownHook] INFO  [customer-services,,] m.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2023-04-15 22:05:27,127] [SpringApplicationShutdownHook] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+[2023-04-15 22:05:30,134] [SpringApplicationShutdownHook] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Unregistering ...
+[2023-04-15 22:05:30,141] [SpringApplicationShutdownHook] INFO  [customer-services,,] .t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/CUSTOMER-SERVICES/192.168.1.108:customer-services:8080": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/CUSTOMER-SERVICES/192.168.1.108:customer-services:8080": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:888)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:868)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:764)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:646)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:425)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:383)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:213)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:191)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:184)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1189)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1182)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1084)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1053)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:173)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1003)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:139)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:108)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:585)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:666)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory$1.run(PlainConnectionSocketFactory.java:87)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:84)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:190)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:54)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:93)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:862)
+	... 37 more
+
+[2023-04-15 22:05:30,142] [SpringApplicationShutdownHook] WARN  [customer-services,,] .s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/CUSTOMER-SERVICES/192.168.1.108:customer-services:8080": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+[2023-04-15 22:05:30,144] [SpringApplicationShutdownHook] INFO  [customer-services,,] .t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/CUSTOMER-SERVICES/192.168.1.108:customer-services:8080": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/CUSTOMER-SERVICES/192.168.1.108:customer-services:8080": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:888)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:868)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:764)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:646)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:425)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:383)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:213)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:191)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:184)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1189)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1182)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1084)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1053)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:173)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1003)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:139)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:108)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:585)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:666)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory$1.run(PlainConnectionSocketFactory.java:87)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:84)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:190)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:54)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:93)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:862)
+	... 38 more
+
+[2023-04-15 22:05:30,145] [SpringApplicationShutdownHook] WARN  [customer-services,,] .s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/CUSTOMER-SERVICES/192.168.1.108:customer-services:8080": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+[2023-04-15 22:05:30,145] [SpringApplicationShutdownHook] ERROR [customer-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICES/192.168.1.108:customer-services:8080 - de-registration failedCannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892) ~[eureka-client-2.0.0.jar:2.0.0]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:425) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:383) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:213) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:191) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:184) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389) ~[spring-cloud-context-4.0.1.jar:4.0.1]
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136) ~[spring-cloud-context-4.0.1.jar:4.0.1]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1189) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1182) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1084) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1053) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:173) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1003) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:139) ~[spring-boot-3.0.5.jar:3.0.5]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:108) ~[spring-boot-3.0.5.jar:3.0.5]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+[2023-04-15 22:05:30,149] [SpringApplicationShutdownHook] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient

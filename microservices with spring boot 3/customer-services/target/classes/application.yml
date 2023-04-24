@@ -1,0 +1,74 @@
+server:
+  #port: ${PORT:0}
+  port: 8080
+
+# Take the span id and trace id from the Mapped Diagnostic Context (MDC) and
+# put them into the log message.
+logging:
+  file:
+    path: './logs/${spring.application.name}'
+    name: ${logging.file.path}.log
+  pattern:
+    console: "[%d] [%t] %-5level [${spring.application.name:},%X{traceId:-},%X{spanId:-}] %-32.32logger{36} - %msg%n"
+    file: "[%d] [%t] %-5level [${spring.application.name:},%X{traceId:-},%X{spanId:-}] %-32.32logger{36} - %msg%n"
+  logback:
+    rolling policy:
+      max-file-size: 20MB
+spring:
+  application:
+    name: customer-services
+  datasource:
+    url: jdbc:postgresql://localhost:5432/customer
+    password: password
+    username: reancode
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+  rabbitmq:
+    addresses: localhost:5672
+  kafka:
+    bootstrap-servers: http://localhost:9092
+    consumer:
+      group-id: notification-id
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
+    enabled: true
+  #instance:
+  #  instance-id: ${spring.application.name}:${HOSTNAME}:${random.uuid}
+
+# sampling all in dev, reduce it in prod to save loading
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
+  endpoints:
+    web:
+      exposure:
+        include: prometheus
+  metrics:
+    distribution:
+      percentiles-histogram:
+        http:
+          server:
+            requests: true
+
+# rabbitmq
+rabbitmq:
+  exchanges:
+    internal: internal.exchange # create a new topic exchange
+  queues:
+    notification: notification.queue # create a new queue name
+  routing-keys:
+    internal-notification: internal.notification.routing-key # create a new name of exchange and queue (binding)
